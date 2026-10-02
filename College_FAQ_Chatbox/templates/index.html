@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusCareer FAQ</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">CC</div>
+
+            <div>
+                <h2>CampusCareer</h2>
+                <span>FAQ Assistant</span>
+            </div>
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <h3>Topics</h3>
+
+            <button onclick="sendQuickQuestion('What is the placement process?')">
+                Placement Process
+            </button>
+
+            <button onclick="sendQuickQuestion('Who is eligible for placements?')">
+                Eligibility
+            </button>
+
+            <button onclick="sendQuickQuestion('How should I prepare for aptitude tests?')">
+                Aptitude Preparation
+            </button>
+
+            <button onclick="sendQuickQuestion('How can I prepare for a technical interview?')">
+                Technical Interview
+            </button>
+
+            <button onclick="sendQuickQuestion('How should I prepare my resume?')">
+                Resume
+            </button>
+
+            <button onclick="sendQuickQuestion('Can internships help with placements?')">
+                Internships
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <p>College Placement Assistant</p>
+
+            <span>Powered by NLP</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Placements & Careers</h1>
+
+                <p>
+                    Ask questions about college placements,
+                    interviews and career preparation.
+                </p>
+
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Online
+            </div>
+
+        </header>
+
+
+        <!-- Chat Area -->
+
+        <section id="chatBox" class="chat-box">
+
+            <div class="message bot-message">
+
+                <div class="avatar">
+                    AI
+                </div>
+
+                <div class="message-content">
+
+                    <div class="sender">
+                        CampusCareer
+                    </div>
+
+                    <div class="bubble">
+
+                        Hello! 👋
+
+                        <br><br>
+
+                        I am your college placement FAQ assistant.
+
+                        <br><br>
+
+                        You can ask me about:
+
+                        <ul>
+                            <li>Placement process</li>
+                            <li>Eligibility</li>
+                            <li>Aptitude tests</li>
+                            <li>Technical interviews</li>
+                            <li>HR interviews</li>
+                            <li>Resume preparation</li>
+                            <li>Internships</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="time">
+                        Just now
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Input Area -->
+
+        <section class="input-area">
+
+            <div class="suggestions">
+
+                <button onclick="sendQuickQuestion('Who is eligible for placements?')">
+                    Placement Eligibility
+                </button>
+
+                <button onclick="sendQuickQuestion('How should I prepare for a technical interview?')">
+                    Interview Preparation
+                </button>
+
+                <button onclick="sendQuickQuestion('How should I prepare my resume?')">
+                    Resume Tips
+                </button>
+
+            </div>
+
+
+            <div class="input-container">
+
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="Ask a placement-related question..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton" onclick="sendQuestion()">
+                    Send
+                </button>
+
+            </div>
+
+
+            <p class="footer-note">
+                This chatbot provides general placement information.
+                College-specific rules should be verified with the official
+                placement cell.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
